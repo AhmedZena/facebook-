@@ -1,0 +1,324 @@
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1877F2;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    width: 100%;
+    height: 60px;
+
+
+
+    .navbarLeft {
+        flex: 2;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-size: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-weight: bold;
+        cursor: pointer;
+
+        .facebookIcon {
+            width: 35px;
+            height: 35px;
+        }
+
+
+        .searchBar {
+            display: flex;
+            align-items: center;
+            height: 30px;
+            width: 70%;
+            background-color: #1877F2;
+            border-radius: 20px;
+            margin-left: 10px;
+            position: relative;
+            border: 1px solid #fff;
+            padding: 10px;
+
+            //shadow effect
+            box-shadow: 0 0 5px #fff;
+            //keyframes
+            animation: shadow 3s infinite alternate;
+
+            //animation
+
+            @keyframes shadow {
+                from {
+                    box-shadow: 0 0 2px #fff;
+                }
+
+                to {
+                    box-shadow: 0 0 15px #fff;
+                }
+            }
+
+
+            .searchInput {
+                font-size: 15px;
+                margin-left: 10px;
+                position: absolute;
+                background-color: transparent;
+                color: #fff;
+                border: none;
+                outline: none;
+                width: 100%;
+
+                &::placeholder {
+                    color: #ececec;
+                }
+
+
+            }
+
+            .searchIcon {
+                font-size: 20px;
+                color: #fff;
+                position: absolute;
+                right: 10px;
+            }
+
+            &:hover {
+                width: 72%;
+                height: 32px;
+                transition: all 0.5s ease;
+            }
+
+            //effect when typing
+            &:focus-within {
+                width: 75%;
+                height: 35px;
+                transition: all 0.5s ease;
+            }
+
+            //after showing the search bar
+
+
+
+        }
+
+    }
+
+
+
+    // Navbar Center
+    .navbarCenter {
+        display: flex;
+        flex: 3;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer;
+
+        .navbarIconItem {
+            font-size: 20px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            position: relative;
+
+
+            // Icons
+            .navbarIconItemIcon {
+                font-size: 22px;
+                color: #fff;
+
+            }
+
+
+            // spans for Badge
+            .navBarIconBadge {
+                background-color: red;
+                color: #fff;
+                border-radius: 50%;
+                padding: 2px;
+                font-size: 15px;
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: -8px;
+                right: -4px;
+
+
+            }
+
+
+
+            .navbarIconItemText {
+                font-size: 12px;
+                color: #fff;
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+
+        //hover effect
+        .navbarIconItem:hover {
+            color: #1956d8;
+            background-color: rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+            border-radius: 10px;
+            padding: 5px;
+            transition: all 1s ease;
+            border-bottom: 2px solid #fff;
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+    .navbarRight {
+        display: flex;
+        flex: 2;
+        justify-content: end;
+        gap: 20px;
+        align-items: center;
+        color: #fff;
+        margin-left: 10px;
+        margin-right: 20px;
+
+        .creating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 40%;
+        }
+
+        .navbarRightProfile {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            .profilePic {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                cursor: pointer;
+                object-fit: cover;
+                border: 2px solid #fff;
+            }
+
+        }
+    }
+
+
+}
+
+
+
+// media query
+@media only screen and (max-width: 992px) {
+    .navbarContainer {
+        .navbarLeft {
+            flex: 2;
+            font-size: 20px;
+
+            .searchBar {
+                width: 60%;
+
+                .searchInput {
+                    font-size: 10px;
+
+                    //hide placeholder 
+                    &::placeholder {
+                        color: transparent;
+                    }
+                }
+            }
+        }
+
+        .navbarCenter {
+            flex: 5;
+        }
+    }
+}
+
+
+// media query
+@media only screen and (max-width: 768px) {
+    .navbarContainer {
+        .navbarLeft {
+            flex: 3;
+            font-size: 20px;
+
+            .searchBar {
+                width: 60%;
+
+                .searchInput {
+                    font-size: 10px;
+
+                    //     //hide placeholder 
+                    &::placeholder {
+                        color: white;
+                    }
+
+                }
+            }
+        }
+
+        .navbarCenter {
+            display: none;
+        }
+
+        .navbarRight {
+            .creating {
+                width: 50%;
+            }
+        }
+    }
+}
+
+//media query 
+@media only screen and (max-width: 576px) {
+    .navbarContainer {
+        .navbarLeft {
+            flex: 3;
+            font-size: 20px;
+
+            .searchBar {
+                width: 60%;
+
+                .searchInput {
+                    font-size: 10px;
+
+                    //     //hide placeholder 
+                    &::placeholder {
+                        color: transparent;
+                    }
+
+                }
+            }
+        }
+
+        .navbarCenter {
+            display: none;
+        }
+
+        .navbarRight {
+            flex: 1;
+
+            .creating {
+                width: 50%;
+            }
+        }
+    }
+}

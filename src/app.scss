@@ -1,0 +1,36 @@
+//global styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #d1d1d1;
+    height: 100vh;
+}
+
+
+
+//scrollbar
+::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+
+
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #1877F2;
+    border-radius: 5px;
+    //cusror of the scrollbar
+    cursor: pointer;
+
+}

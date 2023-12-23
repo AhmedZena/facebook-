@@ -1,0 +1,27 @@
+       .sidebarListItem {
+           padding: 10px;
+           display: flex;
+           align-items: center;
+
+           margin-bottom: 10px;
+           transition: all 0.3s ease;
+           border-bottom: 1px dashed #3f0ed4;
+
+           //delete the last border
+           &:last-child {
+               border-bottom: none;
+           }
+
+           &:hover {
+               background-color: #ebebeb;
+               border-radius: 10px;
+           }
+
+           .sidebarListIcon {
+               width: 30px;
+               height: 30px;
+               margin-right: 10px;
+           }
+
+
+       }

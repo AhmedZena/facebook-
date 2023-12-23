@@ -1,0 +1,22 @@
+.stories {
+    display: flex;
+
+    width: 700px;
+    height: 230px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    overflow-y: hidden;
+
+    box-shadow: 0 0 1px 4px lighten(#4287f5, 20%),
+        0 0 1px 1px lighten(#094ab2, 40%),
+        0 0 1px 1px lighten(#10141b, 60%),
+        0 0 1px 1px lighten(#4287f5, 80%),
+        0 0 1px 1px #4e5b6f;
+
+
+
+}
